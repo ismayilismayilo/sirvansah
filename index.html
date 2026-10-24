@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>“Şirvanşah” Muzey Restoran – Qədim Bakının ürəyində</title>
+<meta name="description" content="Qədim tariximiz, zəngin mədəniyyətimiz, milli mətbəximiz və muğamlarımız. İçərişəhər, Salatın Əsgərova küç., 86.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--red:#9b1226;--red2:#c41e3a;--dark:#5c0a17;--white:#fffdfb;--rose:#fbeeee;--ink:#2a1215;
+--hand:'Great Vibes','Brush Script MT',cursive;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--white);color:var(--ink);overflow-x:hidden;line-height:1.7;padding-top:env(safe-area-inset-top)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:auto;padding:0 22px}
+section{padding:96px 0;position:relative}
+h2{font-family:var(--hand);font-weight:400;font-size:clamp(3rem,8vw,5rem);color:var(--red);line-height:1.1}
+h3{font-family:var(--serif);font-weight:600;font-size:1.5rem}
+.sub{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:#7a4a50;max-width:560px;margin-top:6px}
+.center{text-align:center}.center .sub{margin-inline:auto}
+.orn{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 0 4px;color:var(--red)}
+.orn i{height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--red))}
+.orn i:last-child{transform:scaleX(-1)}
+.orn svg{width:22px;height:22px;animation:spin 12s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.btn{display:inline-block;padding:14px 34px;border-radius:50px;font-weight:500;letter-spacing:.06em;position:relative;overflow:hidden;transition:.4s;cursor:pointer;border:2px solid var(--red);font-family:var(--sans);font-size:1rem}
+.btn.fill{background:var(--red);color:#fff}.btn.line{color:var(--red);background:transparent}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:.7s}
+.btn:hover::after{left:140%}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(155,18,38,.3)}
+.btn.line:hover{background:var(--red);color:#fff}
+/* preloader */
+#pre{position:fixed;inset:0;background:var(--white);z-index:999;display:grid;place-items:center;transition:opacity .8s .2s,visibility .8s .2s}
+#pre.off{opacity:0;visibility:hidden}
+#pre b{font-family:var(--hand);font-weight:400;font-size:clamp(3.5rem,14vw,7rem);color:var(--red);clip-path:inset(0 100% 0 0);animation:write 2s forwards}
+@keyframes write{to{clip-path:inset(0 0 0 0)}}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:calc(14px + env(safe-area-inset-top)) 0 14px;transition:.4s}
+nav.s{background:rgba(255,253,251,.94);backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(92,10,23,.12);padding-top:calc(8px + env(safe-area-inset-top));padding-bottom:8px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--hand);font-size:2.2rem;color:var(--red);line-height:1}
+.logo small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;text-align:center;font-weight:500}
+.links{display:flex;gap:30px;align-items:center}
+.links a{font-size:.95rem;position:relative;padding:4px 0}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--red);transition:.35s}
+.links a:not(.btn):hover::after{width:100%}
+.links .btn{padding:9px 22px;color:#fff}
+.burger{display:none;width:44px;height:44px;background:none;border:0;cursor:pointer;position:relative;z-index:120}
+.burger span{position:absolute;left:10px;right:10px;height:2px;background:var(--red);transition:.4s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger.x span:nth-child(1){top:21px;transform:rotate(45deg)}.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){top:21px;transform:rotate(-45deg)}
+/* hero */
+#home{min-height:100svh;display:grid;place-items:center;text-align:center;padding:120px 0 80px;background:radial-gradient(circle at 50% 40%,#fff 0%,var(--rose) 70%,#f3d6d8 100%);overflow:hidden}
+#home .wrap{position:relative;z-index:2}
+.hero-t{font-family:var(--hand);font-size:clamp(4.5rem,17vw,11rem);color:var(--red);line-height:1;text-shadow:0 6px 30px rgba(155,18,38,.18)}
+.hero-t span{display:inline-block;opacity:0;transform:translateY(60px) rotate(-8deg);animation:ltr .9s forwards cubic-bezier(.2,1.4,.4,1)}
+@keyframes ltr{to{opacity:1;transform:none}}
+.tag{letter-spacing:.5em;font-size:.8rem;font-weight:500;color:var(--dark);margin-top:-6px;opacity:0;animation:fade 1s 1.6s forwards}
+.hero-s{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,3vw,1.6rem);max-width:640px;margin:22px auto 34px;opacity:0;animation:fade 1s 1.9s forwards}
+.cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fade 1s 2.2s forwards}
+@keyframes fade{to{opacity:1}}
+.buta{position:absolute;fill:none;stroke:var(--red);stroke-width:1.4;opacity:.13;animation:float 9s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-30px) rotate(8deg)}}
+canvas#pt{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.scroll{position:absolute;bottom:24px;left:50%;width:26px;height:44px;border:2px solid var(--red);border-radius:20px;z-index:2;transform:translateX(-50%)}
+.scroll::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--red);animation:sc 1.6s infinite}
+@keyframes sc{to{transform:translateY(16px);opacity:0}}
+/* marquee */
+.mq{background:var(--red);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+.mq div{display:inline-block;animation:mq 28s linear infinite;font-family:var(--hand);font-size:2rem}
+.mq span{margin:0 26px;opacity:.9}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.frame{position:relative;aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:linear-gradient(160deg,var(--red) 0%,var(--dark) 100%);display:grid;place-items:center;overflow:hidden;box-shadow:0 30px 60px rgba(92,10,23,.3)}
+.frame::before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.5);border-radius:190px 190px 8px 8px}
+.frame::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,255,255,.04) 22px 44px)}
+.frame b{font-family:var(--hand);font-weight:400;color:#fff;font-size:clamp(3rem,7vw,4.6rem);z-index:1;text-align:center;line-height:1.1;animation:glow 3s ease-in-out infinite}
+@keyframes glow{50%{text-shadow:0 0 28px rgba(255,255,255,.7)}}
+.about p{margin-top:16px;font-size:1.05rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.stat{text-align:center;padding:18px 6px;border-radius:16px;background:var(--rose);transition:.4s}
+.stat:hover{transform:translateY(-6px);background:var(--red);color:#fff}
+.stat b{font-family:var(--serif);font-size:2.4rem;color:var(--red);display:block;line-height:1.1;transition:.4s}
+.stat:hover b{color:#fff}.stat span{font-size:.85rem}
+/* menu */
+#menu{background:var(--rose)}
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:36px 0 40px}
+.tab{padding:10px 24px;border-radius:40px;border:1.5px solid var(--red);background:transparent;color:var(--red);cursor:pointer;font:500 .95rem var(--sans);transition:.35s}
+.tab.on,.tab:hover{background:var(--red);color:#fff;transform:translateY(-2px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border-radius:20px;padding:28px 24px;position:relative;overflow:hidden;box-shadow:0 8px 28px rgba(92,10,23,.08);transition:transform .4s,box-shadow .4s;transform-style:preserve-3d;animation:pop .6s both}
+@keyframes pop{from{opacity:0;transform:scale(.85) translateY(30px)}}
+.card::before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:linear-gradient(90deg,var(--red),var(--red2));transform:scaleX(0);transform-origin:left;transition:.5s}
+.card:hover::before{transform:scaleX(1)}.card:hover{box-shadow:0 22px 44px rgba(155,18,38,.22)}
+.card .ic{font-size:2.3rem;display:inline-block;transition:.5s}.card:hover .ic{transform:rotate(18deg) scale(1.25)}
+.card h3{margin:8px 0 4px;color:var(--red)}.card p{font-size:.95rem;color:#6a4448}
+/* features */
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:50px}
+.f{text-align:center;padding:34px 22px;border:1px solid #efd3d6;border-radius:24px;transition:.5s;background:#fff}
+.f:hover{background:var(--red);color:#fff;transform:translateY(-10px);box-shadow:0 24px 50px rgba(155,18,38,.3)}
+.f:hover h3{color:#fff}.f h3{color:var(--red);transition:.4s}
+.f .ic{width:72px;height:72px;margin:0 auto 14px;border-radius:50%;background:var(--rose);display:grid;place-items:center;font-size:2rem;transition:.5s}
+.f:hover .ic{transform:rotateY(360deg)}
+/* guests */
+#guests{background:linear-gradient(135deg,var(--dark),var(--red));color:#fff;overflow:hidden}
+#guests h2{color:#fff}#guests .sub{color:#f5d4d8}
+.quotes{position:relative;max-width:720px;margin:40px auto 0;min-height:190px;text-align:center}
+.q{position:absolute;inset:0;opacity:0;transform:translateX(40px);transition:.8s;font-family:var(--serif);font-size:clamp(1.3rem,3vw,1.7rem);font-style:italic}
+.q.on{opacity:1;transform:none}.q small{display:block;font-family:var(--hand);font-style:normal;font-size:1.8rem;margin-top:14px}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.dots i{width:10px;height:10px;border-radius:10px;background:rgba(255,255,255,.4);cursor:pointer;transition:.4s}.dots i.on{width:32px;background:#fff}
+/* reserve */
+.res{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+form{background:#fff;padding:34px;border-radius:24px;box-shadow:0 24px 60px rgba(92,10,23,.15);border-top:5px solid var(--red)}
+.fld{position:relative;margin-bottom:20px}
+.fld input,.fld select{width:100%;padding:18px 14px 8px;border:1.5px solid #e6c7ca;border-radius:12px;font:1rem var(--sans);background:#fff;color:var(--ink);transition:.3s}
+.fld label{position:absolute;left:15px;top:14px;color:#9a6a70;pointer-events:none;transition:.3s;font-size:.95rem}
+.fld input:focus,.fld select:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 4px rgba(155,18,38,.12)}
+.fld input:focus+label,.fld input:not(:placeholder-shown)+label,.fld select+label{top:3px;font-size:.7rem;color:var(--red)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .btn{width:100%}
+.info p{margin:12px 0;display:flex;gap:14px;align-items:flex-start}
+.info em{font-style:normal;width:44px;height:44px;flex:none;border-radius:50%;background:var(--rose);display:grid;place-items:center;transition:.4s}
+.info p:hover em{background:var(--red);transform:scale(1.15) rotate(-10deg)}
+.info a:hover{color:var(--red)}
+.map{margin-top:20px;border-radius:20px;overflow:hidden;height:220px;border:0;width:100%}
+footer{background:var(--dark);color:#f0cfd3;text-align:center;padding:50px 0 calc(30px + env(safe-area-inset-bottom))}
+footer .logo{color:#fff;font-size:3rem}
+.soc{display:flex;gap:14px;justify-content:center;margin:18px 0}
+.soc a{padding:8px 20px;border:1px solid rgba(255,255,255,.4);border-radius:30px;transition:.4s}.soc a:hover{background:#fff;color:var(--red);transform:translateY(-4px)}
+footer small{opacity:.7}
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--red);color:#fff;padding:14px 26px;border-radius:40px;z-index:200;transition:.6s cubic-bezier(.2,1.4,.4,1);box-shadow:0 12px 30px rgba(0,0,0,.3);text-align:center;width:max-content;max-width:90vw}
+.toast.on{transform:translate(-50%,0)}
+.top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));width:48px;height:48px;border-radius:50%;background:var(--red);color:#fff;border:0;font-size:1.3rem;cursor:pointer;opacity:0;transform:scale(0);transition:.4s;z-index:90}
+.top.on{opacity:1;transform:scale(1)}
+/* reveal */
+.rv{opacity:0;transition:opacity 1s,transform 1s;transform:translateY(50px)}
+.rv.l{transform:translateX(-60px)}.rv.r{transform:translateX(60px)}.rv.z{transform:scale(.88)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+section{padding:70px 0}
+.burger{display:block}
+.links{position:fixed;inset:0;background:var(--white);flex-direction:column;justify-content:center;gap:26px;font-size:1.4rem;clip-path:circle(0 at calc(100% - 40px) 40px);transition:clip-path .7s;z-index:110}
+.links.on{clip-path:circle(150% at calc(100% - 40px) 40px)}
+.about,.res{grid-template-columns:1fr;gap:36px}
+.frame{max-width:340px;margin:auto;width:100%}
+}
+@media(max-width:480px){.row{grid-template-columns:1fr}form{padding:24px 18px}.stat b{font-size:1.9rem}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="buta" viewBox="0 0 100 130"><path d="M52 6C22 8 6 34 10 66c3 30 26 56 52 54 22-2 30-24 18-38-10-12-28-8-30 8-1 10 8 14 14 8M52 6c14 2 24 14 22 28M30 40c-6 18 2 36 16 44"/></symbol>
+<symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></symbol>
+</defs></svg>
+
+<div id="pre"><b>Şirvanşah</b></div>
+
+<nav id="nav"><div class="wrap">
+<a href="#home" class="logo">Şirvanşah<small>MUZEY RESTORAN</small></a>
+<button class="burger" id="bg" aria-label="Menyu"><span></span><span></span><span></span></button>
+<div class="links" id="lk">
+<a href="#about">Haqqımızda</a><a href="#menu">Menyu</a><a href="#why">Xüsusiyyətlər</a><a href="#guests">Qonaqlar</a><a href="#book" class="btn fill">Rezerv et</a>
+</div></div></nav>
+
+<header id="home">
+<canvas id="pt"></canvas>
+<svg class="buta" style="left:5%;top:18%;width:130px" viewBox="0 0 100 130"><use href="#buta"/></svg>
+<svg class="buta" style="right:6%;top:55%;width:180px;animation-delay:-3s" viewBox="0 0 100 130"><use href="#buta"/></svg>
+<svg class="buta" style="left:14%;bottom:8%;width:90px;animation-delay:-5s" viewBox="0 0 100 130"><use href="#buta"/></svg>
+<div class="wrap">
+<h1 class="hero-t" id="ht">Şirvanşah</h1>
+<p class="tag">MUZEY RESTORAN</p>
+<p class="hero-s">Qədim tariximiz, zəngin mədəniyyətimiz, milli mətbəximiz və muğamlarımız bir süfrədə.</p>
+<div class="cta"><a href="#book" class="btn fill">Masa rezerv et</a><a href="#menu" class="btn line">Menyuya bax</a></div>
+</div>
+<div class="scroll"></div>
+</header>
+
+<div class="mq"><div id="mq"></div></div>
+
+<section id="about"><div class="wrap about">
+<div class="rv l"><div class="frame" id="fr"><b>Qədim<br>Bakının<br>ürəyində</b></div></div>
+<div class="rv r">
+<h2>Tarixlə dadın görüşü</h2>
+<div class="orn" style="justify-content:flex-start"><i></i><svg><use href="#star"/></svg></div>
+<p>İçərişəhərin daş divarları arasında yerləşən “Şirvanşah” yalnız restoran deyil, canlı muzeydir. Əntiqə əşyalar, xalçalar və qədim sənədlər sizi keçmişə aparır.</p>
+<p>Mətbəximiz milli resepturalara sadiqdir: odun közündə, ağır-ağır və sevgi ilə hazırlanan yeməklər muğam sədaları altında təqdim olunur.</p>
+<div class="stats">
+<div class="stat"><b data-n="57">0</b><span>min izləyici</span></div>
+<div class="stat"><b data-n="100">0</b><span>% milli mətbəx</span></div>
+<div class="stat"><b data-n="1">0</b><span>unudulmaz axşam</span></div>
+</div></div></div></section>
+
+<section id="menu"><div class="wrap center">
+<h2 class="rv">Milli mətbəximiz</h2>
+<div class="orn"><i></i><svg><use href="#star"/></svg><i></i></div>
+<p class="sub rv">Hər yemək nənələrimizin süfrəsindən gələn dadı yaşadır.</p>
+<div class="tabs rv" id="tabs"></div>
+<div class="grid" id="grid" style="text-align:left"></div>
+</div></section>
+
+<section id="why"><div class="wrap center">
+<h2 class="rv">Niyə Şirvanşah?</h2>
+<div class="orn"><i></i><svg><use href="#star"/></svg><i></i></div>
+<div class="feat">
+<div class="f rv z"><div class="ic">🏺</div><h3>Muzey atmosferi</h3><p>Əntiqə eksponatlar və qədim interyer əhatəsində yemək.</p></div>
+<div class="f rv z" style="transition-delay:.15s"><div class="ic">🎶</div><h3>Muğam axşamları</h3><p>Canlı muğam və milli rəqs proqramları.</p></div>
+<div class="f rv z" style="transition-delay:.3s"><div class="ic">🔥</div><h3>Közdə bişmiş dadlar</h3><p>Ənənəvi üsullarla hazırlanan təzə yeməklər.</p></div>
+<div class="f rv z" style="transition-delay:.45s"><div class="ic">🥂</div><h3>Xüsusi tədbirlər</h3><p>Ad günü, qonaqlıq və rəsmi qəbullar üçün salonlar.</p></div>
+</div></div></section>
+
+<section id="guests"><div class="wrap center">
+<h2 class="rv">Qonaqlarımız</h2>
+<p class="sub rv">Dünyanın hər yerindən gələn qonaqlar süfrəmizin şahidi olub.</p>
+<div class="quotes" id="qs">
+<div class="q on">“Hər guşəsi tarix qoxuyur. Belə mehribanlıq nadir tapılır.”<small>Xarici qonaq</small></div>
+<div class="q">“Plov və dolma nənəmin əlini xatırlatdı. Muğam isə ruhumuzu isitdi.”<small>Yerli qonaq</small></div>
+<div class="q">“Həm muzey, həm restoran. Bakıya gələn hər kəs burada olmalıdır.”<small>Turist</small></div>
+</div>
+<div class="dots" id="dots"></div>
+</div></section>
+
+<section id="book"><div class="wrap res">
+<div class="info rv l">
+<h2>Süfrə sizi gözləyir</h2>
+<p class="sub">Masanı əvvəlcədən rezerv edin, qalanını bizə buraxın.</p>
+<div style="margin-top:26px">
+<p><em>📍</em><span>Salatın Əsgərova küç., 86<br>İçərişəhər, Bakı</span></p>
+<p><em>📱</em><a href="tel:+994502420903">+994 (50) 242 09 03</a></p>
+<p><em>☎️</em><a href="tel:+994125950902">+994 (12) 595 09 02</a></p>
+<p><em>📷</em><a href="https://instagram.com/shirvanshah" target="_blank" rel="noopener">@shirvanshah</a></p>
+</div>
+<iframe class="map" loading="lazy" title="Xəritə" src="https://www.google.com/maps?q=Salatın+Əsgərova+86+Bakı&output=embed"></iframe>
+</div>
+<form id="f" class="rv r">
+<div class="fld"><input id="nm" placeholder=" " required><label for="nm">Ad, soyad</label></div>
+<div class="fld"><input id="ph" type="tel" placeholder=" " required><label for="ph">Telefon</label></div>
+<div class="row">
+<div class="fld"><input id="dt" type="date" placeholder=" " required><label for="dt">Tarix</label></div>
+<div class="fld"><input id="tm" type="time" placeholder=" " required value="19:00"><label for="tm">Saat</label></div></div>
+<div class="fld"><select id="gs"><option>1-2 nəfər</option><option>3-4 nəfər</option><option>5-8 nəfər</option><option>9+ nəfər</option></select><label>Qonaq sayı</label></div>
+<button class="btn fill" type="submit">Rezervi göndər</button>
+</form></div></section>
+
+<footer><div class="wrap">
+<div class="logo">Şirvanşah</div><p>“Şirvanşah” Muzey Restoran</p>
+<div class="soc"><a href="https://instagram.com/shirvanshah" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/shirvanshakh" target="_blank" rel="noopener">Facebook</a></div>
+<small>© <span id="yr"></span> Şirvanşah Muzey Restoran. Bütün hüquqlar qorunur.</small>
+</div></footer>
+
+<button class="top" id="top" aria-label="Yuxarı">↑</button>
+<div class="toast" id="ts"></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// preloader
+addEventListener('load',()=>setTimeout(()=>$('#pre').classList.add('off'),2200));
+setTimeout(()=>$('#pre').classList.add('off'),4000);
+// hero letters
+$('#ht').innerHTML=[...'Şirvanşah'].map((c,i)=>`<span style="animation-delay:${2.3+i*.09}s">${c}</span>`).join('');
+// marquee
+$('#mq').innerHTML=('<span>Piti</span><span>✦</span><span>Dolma</span><span>✦</span><span>Plov</span><span>✦</span><span>Qutab</span><span>✦</span><span>Kabab</span><span>✦</span><span>Paxlava</span><span>✦</span>').repeat(8);
+$('#yr').textContent=new Date().getFullYear();
+// nav
+const nav=$('#nav'),top=$('#top'),bg=$('#bg'),lk=$('#lk');
+addEventListener('scroll',()=>{nav.classList.toggle('s',scrollY>40);top.classList.toggle('on',scrollY>600)},{passive:true});
+top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+bg.onclick=()=>{bg.classList.toggle('x');lk.classList.toggle('on')};
+$$('.links a').forEach(a=>a.onclick=()=>{bg.classList.remove('x');lk.classList.remove('on')});
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
+e.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n;let v=0;const t=setInterval(()=>{v+=Math.ceil(n/40);if(v>=n){v=n;clearInterval(t)}c.textContent=v},35)});
+io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach(e=>io.observe(e));
+// menu
+const M={
+'Əsas yeməklər':[['🍲','Piti','Qoyun əti, noxud və kişmişlə küpdə bişirilir.'],['🍚','Şah plov','Safranlı düyü, qızardılmış quru meyvə və ət.'],['🍖','Lülə kabab','Közdə bişmiş, sumaq və təndir çörəyi ilə.'],['🥬','Yarpaq dolması','Əsl Azərbaycan dolması, qatıq ilə.'],['🍗','Qaygana','Qızılı rəngli, yumşaq milli omlet.'],['🥘','Bozbaş','Qoyun ətli, nohudlu qaynar şorba.']],
+'Başlanğıclar':[['🥟','Qutab','Göyərti, ət və ya balqabaqla, sacda bişir.'],['🥗','Mövsümi salat','Təzə tərəvəz və qoz-ənbər sousu.'],['🧀','Pendir-göyərti','Kənd pendiri, təzə reyhan, tərə.'],['🫒','Turşu qarışığı','Ev turşuları, ənənəvi qaydada.']],
+'Şirniyyat':[['🍯','Şəki halvası','Düyü, qoz və bal ilə qat-qat.'],['🥮','Paxlava','Bakı üslubunda, fındıq-qozla.'],['🍬','Şəkərbura','Badam içli, zərif xəmir.'],['🍵','Armudu çay','İsti mürəbbə və limonla.']]};
+let k=Object.keys(M);
+$('#tabs').innerHTML=k.map((t,i)=>`<button class="tab${i?'':' on'}">${t}</button>`).join('');
+function show(t){$('#grid').innerHTML=M[t].map((d,i)=>`<div class="card" style="animation-delay:${i*.08}s"><div class="ic">${d[0]}</div><h3>${d[1]}</h3><p>${d[2]}</p></div>`).join('');
+$$('.card').forEach(c=>{c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(700px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-6px)`};c.onmouseleave=()=>c.style.transform=''})}
+show(k[0]);
+$$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');show(b.textContent)});
+// testimonials
+const qs=$$('.q');let qi=0;
+$('#dots').innerHTML=qs.map((_,i)=>`<i class="${i?'':'on'}"></i>`).join('');
+const ds=$$('#dots i');
+function go(i){qs[qi].classList.remove('on');ds[qi].classList.remove('on');qi=i;qs[qi].classList.add('on');ds[qi].classList.add('on')}
+ds.forEach((d,i)=>d.onclick=()=>go(i));
+setInterval(()=>go((qi+1)%qs.length),5000);
+// reservation
+$('#dt').min=new Date().toISOString().split('T')[0];
+function toast(m){const t=$('#ts');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),3500)}
+$('#f').onsubmit=e=>{e.preventDefault();
+const m=`Salam! Rezerv: ${$('#nm').value}, tel: ${$('#ph').value}, tarix: ${$('#dt').value}, saat: ${$('#tm').value}, ${$('#gs').value}.`;
+toast('Təşəkkürlər! WhatsApp-a yönləndirilirsiniz…');
+setTimeout(()=>open('https://wa.me/994502420903?text='+encodeURIComponent(m),'_blank'),1200);e.target.reset()};
+// particles (qırmızı ləçəklər)
+const cv=$('#pt'),cx=cv.getContext('2d');let W,H,P=[];
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<(innerWidth<600?18:34);i++)P.push({x:Math.random()*1200,y:Math.random()*900,r:4+Math.random()*7,s:.3+Math.random()*.8,a:Math.random()*6,w:Math.random()*.02});
+(function d(){cx.clearRect(0,0,W,H);P.forEach(p=>{p.y+=p.s;p.a+=p.w+.01;p.x+=Math.sin(p.a)*.6;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle='rgba(196,30,58,.35)';cx.beginPath();cx.ellipse(0,0,p.r,p.r*1.8,0,0,7);cx.fill();cx.restore()});requestAnimationFrame(d)})();
+// parallax on frame
+addEventListener('mousemove',e=>{const f=$('#fr');if(!f)return;f.style.transform=`rotateY(${(e.clientX/innerWidth-.5)*8}deg) rotateX(${-(e.clientY/innerHeight-.5)*6}deg)`});
+</script>
+</body>
+</html>
